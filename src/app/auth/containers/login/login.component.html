@@ -5,17 +5,12 @@
             <mat-card-subtitle>Login</mat-card-subtitle>
         </mat-card-header>
 
-        <mat-card-content>
+        <mat-card-content class="login-container">
             <mat-form-field>
                 <input type="text" matInput placeholder="Email" formControlName="email" autofocus>
             </mat-form-field>
-            <mat-form-field>
-                <input [type]="hidePassword ? 'password' : 'text'" matInput placeholder="Enter your password"
-                    formControlName="password">
-                <mat-icon matSuffix (click)="hidePassword = !hidePassword">
-                    {{ hidePassword ? 'visibility_off' : 'visibility' }}
-                </mat-icon>
-            </mat-form-field>
+            <ac-password-input placeholder="Enter your password" formControlName="password">
+            </ac-password-input>
         </mat-card-content>
 
         <mat-card-actions>

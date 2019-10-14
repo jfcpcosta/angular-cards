@@ -12,8 +12,6 @@ export class LoginComponent implements OnInit {
     password: null
   });
 
-  hidePassword = true;
-
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {}

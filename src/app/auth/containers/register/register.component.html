@@ -1,3 +1,28 @@
-<form [formGroup]="form">
-    asdasd
+<form [formGroup]="form" (submit)="registerSubmitHandler()">
+    <mat-card class="login-card">
+        <mat-card-header>
+            <mat-card-title>Angular Cards</mat-card-title>
+            <mat-card-subtitle>Sign Up</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content class="login-container">
+            <mat-form-field>
+                <input type="text" matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput placeholder="Username" formControlName="username">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+
+            <ac-password-input placeholder="Password" formControlName="password"></ac-password-input>
+            <ac-password-input placeholder="Confirm password" formControlName="confirmPassword"></ac-password-input>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-button>Login</button>
+            <button type="submit" mat-button>Register</button>
+        </mat-card-actions>
+    </mat-card>
 </form>
