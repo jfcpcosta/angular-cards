@@ -1,11 +1,31 @@
 import { NgModule } from "@angular/core";
 
-import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-import { MatButtonModule } from "@angular/material/button";
+import {
+  MatCardModule,
+  MatButtonModule,
+  MatInputModule,
+  MatIconModule,
+  MatSnackBarModule,
+  MatSlideToggleModule
+} from "@angular/material";
 
 @NgModule({
   declarations: [],
-  imports: [MatSlideToggleModule, MatButtonModule],
-  exports: [MatSlideToggleModule, MatButtonModule]
+  imports: [
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatIconModule,
+    MatSnackBarModule
+  ],
+  exports: [
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatIconModule,
+    MatSnackBarModule
+  ]
 })
 export class SharedModule {}
