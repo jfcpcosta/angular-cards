@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: "ac-login",
@@ -8,19 +9,26 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 })
 export class LoginComponent implements OnInit {
   form: FormGroup = this.fb.group({
-    email: null,
-    password: null
+    email: [null, Validators.required],
+    password: [null, Validators.required]
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private auth: AuthService
+  ) {}
 
   ngOnInit() {}
 
   loginSubmitHandler() {
-    console.log(this.form.value);
-
+    
     if (this.form.valid) {
-      // post login
+      console.log(this.form.value);
+      this.auth.login(this.form.value.email, this.form.value.password).subscribe(
+        res => console.log(res)
+      );
     }
+
+    return false;
   }
 }
