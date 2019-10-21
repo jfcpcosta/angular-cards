@@ -6,7 +6,8 @@ import {
   MatInputModule,
   MatIconModule,
   MatSnackBarModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatToolbarModule
 } from "@angular/material";
 
 @NgModule({
@@ -17,7 +18,8 @@ import {
     MatCardModule,
     MatInputModule,
     MatIconModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatToolbarModule
   ],
   exports: [
     MatSlideToggleModule,
@@ -25,7 +27,8 @@ import {
     MatCardModule,
     MatInputModule,
     MatIconModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatToolbarModule
   ]
 })
 export class SharedModule {}

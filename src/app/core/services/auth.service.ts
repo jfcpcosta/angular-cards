@@ -38,4 +38,10 @@ export class AuthService {
     const params = new HttpParams().set('email', email);
     return this.http.get<boolean>(`/auth/check-user`, { params });
   }
+
+  logout(): boolean {
+    this.token.remove();
+    
+    return true;
+  }
 }

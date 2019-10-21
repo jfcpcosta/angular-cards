@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, AbstractControl } from "@angular/forms";
 import { AuthService } from '../../../core/services/auth.service';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "ac-register",
@@ -19,7 +20,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private auth: AuthService
+    private auth: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit() {}
@@ -35,7 +37,7 @@ export class RegisterComponent implements OnInit {
 
     if (this.form.valid) {
       this.auth.signUpUser(this.form.value).subscribe(
-        res => console.log(res)
+        res => this.router.navigate(['/'])
       );
     }
   }
