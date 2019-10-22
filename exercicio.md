@@ -1,13 +1,13 @@
 # Exercicio
 
 ## Cards API
-    **GET**     /api/v1/cards[?filter=title]
-    **GET**     /api/v1/cards/:id
+    GET     /api/v1/cards[?filter=title]
+    GET     /api/v1/cards/:id
 
-    **POST**    /api/v1/cards 
+    POST    /api/v1/cards 
     { name, description, image, price }
 
-    **PUT**     /api/v1/cards/:id 
+    PUT     /api/v1/cards/:id 
     { name, description, image, price }
 
 **DELETE**  /api/v1/cards/:id
