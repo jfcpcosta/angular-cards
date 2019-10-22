@@ -1,4 +1,4 @@
-# GET /api/v1/cards
+# GET /api/v1/cards[?filter=title]
 # GET /api/v1/cards/:id
 
 # POST /api/v1/cards { name, description, image, price }
