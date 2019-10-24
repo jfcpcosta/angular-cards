@@ -1,0 +1,15 @@
+<div class="preview" [ngStyle]="{ 
+    backgroundImage: previewImage != null ? 'url(' + previewImage + ')' : '' 
+}"></div>
+
+<label>
+    <mat-icon>add_a_photo</mat-icon> Upload Image
+    <input type="file" (change)="onFileChange($event)" accept=".jpg,.jpeg,.png,.gif">
+</label>
+
+<mat-progress-bar
+    *ngIf="mode != 'none'"
+    color="primary"
+    [mode]="mode"
+    [value]="progress">
+</mat-progress-bar>

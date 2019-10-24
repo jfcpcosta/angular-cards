@@ -7,19 +7,24 @@ import {
   MatIconModule,
   MatSnackBarModule,
   MatSlideToggleModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatProgressBarModule
 } from "@angular/material";
+import { CommonModule } from '@angular/common';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [FileUploadComponent],
   imports: [
+    CommonModule,
     MatSlideToggleModule,
     MatButtonModule,
     MatCardModule,
     MatInputModule,
     MatIconModule,
     MatSnackBarModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatProgressBarModule
   ],
   exports: [
     MatSlideToggleModule,
@@ -28,7 +33,9 @@ import {
     MatInputModule,
     MatIconModule,
     MatSnackBarModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatProgressBarModule,
+    FileUploadComponent
   ]
 })
 export class SharedModule {}
